@@ -909,7 +909,7 @@ static int uv__spawn_and_init_child_posix_spawn(
 #endif
 
   /* Destroy the actions/attributes. */
-  (void) posix_spawn_file_actions_destroy(actions);
+  (void) posix_spawn_file_actions_destroy(&actions);
   (void) posix_spawnattr_destroy(&attrs);
 
 error:
